@@ -83,6 +83,24 @@ $student = [
     ]
 ];
 
+
+foreach ($student as  $std) {
+
+    if($std["address"]["district"] == "Dhaka") {
+        echo $std["name"]."<br/>";
+    
+    }
+  
+}
+
+
+
+
+
+// if($students[]["address"] == "Dhaka")
+// { echo $students[]["name"]
+// }
+
 // $info = $student[0]['address']['district'];
 // $inf = $student[2]['address']['district'];
 // // var_dump($inf);
@@ -121,18 +139,18 @@ echo "===============================================<br/>";
 
 // ==================================================ok 
 
-while (($key = array_search("Dhaka", $student)) !== NULL)
+// while (($key = array_search("Dhaka", $student)) !== NULL)
 
-{
+// {
 
-    while (($key = array_search("name", $student)) !== NULL){
-        echo "name";
-    }
-    // echo $student[2]['name'];
+// //     while (($key = array_search("name", $student)) !== NULL){
+// //         echo "name";
+// //     }
+// //     // echo $student[2]['name']; wrong method using 
 
- unset($student[$key]);
+// //  unset($student[$key]);
 
-}
+// }
 
 // $people = array(
 //     2 => array(
