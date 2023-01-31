@@ -84,21 +84,23 @@ $student = [
 ];
 
 
-foreach ($student as  $std) {
+// foreach ($student as  $std) {
 
-    if($std["address"]["district"] == "Dhaka") {
-        echo $std["name"]."<br/>";
+//     if($std["address"]["district"] == "Dhaka") {
+//         echo $std["name"]."<br/>";
     
-    }
+//     }
   
+// }
+
+foreach($student as $students){
+   if($students["address"]["district"]=="Barishal"){
+    echo $students["name"]."<br/>";
+   }
 }
 
-
-
-
-
-// if($students[]["address"] == "Dhaka")
-// { echo $students[]["name"]
+// if($student["address"]["district"] == "Dhaka") {
+//     echo $student["name"];
 // }
 
 // $info = $student[0]['address']['district'];
