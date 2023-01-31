@@ -19,20 +19,26 @@ $gender =$_GET['gender'] ?? '';
 // smae condation
 
 // $carlist = 'toyota,bmw,honda';
-$carlist =$_GET['carlist'];
+$carlist =$_GET['carlist'] ?? '';
 
 
-$eligibleCarList = explode("," , $carlist);
+$eligibleCarList = array_filter( explode("," , $carlist));
 // $echo = explode(',',$carlist);
 echo"<pre>";
 var_dump ($eligibleCarList);
 echo "</pre>";
 
-if(count($eligibleCarList) < 2){
-    echo "you are <b> Eligible</b> for insurance ." ;
-} else {
-  echo  "you are <b> Not Eligible </b> for insurance.";
+if(!empty($eligibleCarList) && count($eligibleCarList)==1){
+    echo " You are Eligible for insurance ";
+}else {
+    echo "Your are not <b>Eligible  </b> for  Insurance";
 }
+
+// if(count($eligibleCarList) < 2){
+//     echo "you are <b> Eligible</b> for insurance ." ;
+// } else {
+//   echo  "you are <b> Not Eligible </b> for insurance.";
+// }
     
 
 
