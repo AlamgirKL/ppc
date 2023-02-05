@@ -1,6 +1,6 @@
-<?php
-$age=$_GET['age'] ?? 0;
-$gender =$_GET['gender'] ?? '';
+ <?php
+// $age=$_GET['age'] ?? 0;
+// $gender =$_GET['gender'] ?? '';
 
 // if(($age >= 21 && $gender >= 'male') || ($age >= 18 && $gender == 'female') ){
 //     echo " You are eligible for marrige according to bd low ";
@@ -19,20 +19,20 @@ $gender =$_GET['gender'] ?? '';
 // smae condation
 
 // $carlist = 'toyota,bmw,honda';
-$carlist =$_GET['carlist'] ?? '';
+// $carlist =$_GET['carlist'] ?? '';
 
 
-$eligibleCarList = array_filter( explode("," , $carlist));
-// $echo = explode(',',$carlist);
-echo"<pre>";
-var_dump ($eligibleCarList);
-echo "</pre>";
+// $eligibleCarList = array_filter( explode("," , $carlist));
+// // $echo = explode(',',$carlist);
+// echo"<pre>";
+// var_dump ($eligibleCarList);
+// echo "</pre>";
 
-if(!empty($eligibleCarList) && count($eligibleCarList)==1){
-    echo " You are Eligible for insurance ";
-}else {
-    echo "Your are not <b>Eligible  </b> for  Insurance";
-}
+// if(!empty($eligibleCarList) && count($eligibleCarList)==1){
+//     echo " You are Eligible for insurance ";
+// }else {
+//     echo "Your are not <b>Eligible  </b> for  Insurance";
+// }
 
 // if(count($eligibleCarList) < 2){
 //     echo "you are <b> Eligible</b> for insurance ." ;
@@ -41,7 +41,32 @@ if(!empty($eligibleCarList) && count($eligibleCarList)==1){
 // }
     
 
+$favcolor =  $_GET['color'] ?? "red";
 
+$valueforprint = '';
+switch ($favcolor) {
+    case "red";
+    $valueforprint = "Your favorite color is Red !";
+    break;
+    case "blue";
 
+    $valueforprint ="your favorit color is blue";
+    break;
+    case "green";
+
+    $valueforprint =" Your favorit color is Green";
+    break;
+    case "yellow" ;
+
+    $valueforprint = "Your favorit color is Yellow";
+    break;
+
+    default :
+    $valueforprint ="your favorit color is red , blue , or Green ! ";
+    
+
+}
+
+echo $valueforprint;
 
 ?>
