@@ -40,33 +40,130 @@
 //   echo  "you are <b> Not Eligible </b> for insurance.";
 // }
     
+//============= switch case =======================
+// $favcolor =  $_GET['color'] ?? "red";
 
-$favcolor =  $_GET['color'] ?? "red";
+// $valueforprint = '';
+// switch ($favcolor) {
+//     case "red";
+//     $valueforprint = "Your favorite color is Red !";
+//     break;
+//     case "blue";
 
-$valueforprint = '';
-switch ($favcolor) {
-    case "red";
-    $valueforprint = "Your favorite color is Red !";
-    break;
-    case "blue";
+//     $valueforprint ="your favorit color is blue";
+//     break;
+//     case "green";
 
-    $valueforprint ="your favorit color is blue";
-    break;
-    case "green";
+//     $valueforprint =" Your favorit color is Green";
+//     break;
+//     case "yellow" ;
 
-    $valueforprint =" Your favorit color is Green";
-    break;
-    case "yellow" ;
+//     $valueforprint = "Your favorit color is Yellow";
+//     break;
 
-    $valueforprint = "Your favorit color is Yellow";
-    break;
-
-    default :
-    $valueforprint ="your favorit color is red , blue , or Green ! ";
+//     default :
+//     $valueforprint ="your favorit color is red , blue , or Green ! ";
     
+
+// }
+
+// echo $valueforprint;
+
+
+//break for forloop 
+$i=10;
+for($i =0; $i < 10; $i++) {
+    if($i==4){
+        continue; // continue mens skip
+    }
+
+    if($i == 8){
+        break;  // halt 
+    }
+
+    echo " Value is : " .$i."<br/>";
+    print("<hr/>");
+}
+print("<hr/>");
+
+$fruits = [
+    "banana",
+    "apple",
+    "dragon "
+    ,
+    "orange",
+    "mango",
+    "jackfruit"
+];
+
+foreach ($fruits as $fruit)
+{
+    echo $fruit."<br/>";
+
+}
+print("<hr/>");
+echo "another code block";
+
+print("<hr/>");
+
+$persons = [
+   
+    'name'=> 'kabir',
+    'age'=>33,
+    'email'=>'kaibr@gmail.com'
+];
+
+
+foreach ($persons as $key => $info){
+    echo $key . "  : " .$info . " <br/>";// there will be no exception to be thrown.
 
 }
 
-echo $valueforprint;
+print("<hr/>");print("<hr/>");
 
+$datas = [
+    [
+          
+    'name'=> 'kabir',
+    'age'=>33,
+    'email'=>'kaibr@gmail.com'
+    ],
+    [
+          
+        'name'=> 'lily',
+        'age'=>33,
+        'email'=>'lily@gmail.com',
+        'address'=> 'Dhaka'
+    ],
+    [
+          
+        'name'=> 'lily',
+        'age'=>33,
+        'email'=>'lily@gmail.com',
+        'address'=> " NY"
+        ]
+
+
+
+ 
+];
+// show the values of array in comma separated way 
+foreach ($datas as $key => $data){
+    // echo "Name :" .$data['name'];
+    // echo " Age  : " .$data['age'];
+    print("<hr/>");
+    // echo " Person's info  :";
+    // echo implode( " ," , $data) . "<br/>";
+
+    echo "Name  :" .$data['name']."<br/>";
+    echo " Age : " .$data['age']. "<br/>";
+    echo "Email : " .$data['email'] ."<br/>";
+
+    if(!empty($data['address'])) {
+
+        echo "Address  : ". $data['address'] ." <br/>";
+    }
+
+
+}
 ?>
