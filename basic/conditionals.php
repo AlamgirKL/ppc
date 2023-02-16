@@ -140,7 +140,14 @@ $datas = [
         'name'=> 'lily',
         'age'=>33,
         'email'=>'lily@gmail.com',
-        'address'=> " NY"
+        'address'=> " NY",
+        'education_info'=> [
+            'ssc'=> [
+                'year'=> '2014'
+            ]
+        ]
+
+
         ]
 
 
@@ -155,15 +162,38 @@ foreach ($datas as $key => $data){
     // echo " Person's info  :";
     // echo implode( " ," , $data) . "<br/>";
 
-    echo "Name  :" .$data['name']."<br/>";
-    echo " Age : " .$data['age']. "<br/>";
-    echo "Email : " .$data['email'] ."<br/>";
+    // echo "Name  :" .$data['name']."<br/>";
+    // echo " Age : " .$data['age']. "<br/>";
+    // echo "Email : " .$data['email'] ."<br/>";
 
-    if(!empty($data['address'])) {
+    // if(!empty($data['address'])) {
 
-        echo "Address  : ". $data['address'] ." <br/>";
+    //     echo "Address  : ". $data['address'] ." <br/>";
+    // }
+    echo "showing value of person " . $key . "<br/>";
+
+ echo "<hr/>";
+
+
+
+foreach ($data as $index=> $pre) {
+    // if(is_array($pre)){
+    // //    echo ucfirst ($index)   .':' . implode(',', $pre)."<br/>";
+    // } else {
+    //     echo ucfirst($index ). ':'.$pre . " <br/>";
+    // }
+    echo "showing value of person " . $key . "<br/>";
+
+    foreach ($request->$pre as $keys => $show)
+    {
+        if(is_array($show)){
+            echo ucfirst ($keys)   .':' . implode(',', $show)."<br/>";
+         } else {
+             echo ucfirst($keys ). ':'.$show . " <br/>";
+         }
     }
 
+}
 
 }
 ?>
