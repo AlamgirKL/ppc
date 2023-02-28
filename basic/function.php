@@ -57,7 +57,8 @@ function  sum (int $a, int $b) : int
     // var_dump ($b);
   $result = $a + (int)$b; // do the addition 
 
-//   return 'result is : ' .$result ."<br/>";
+//   return 'result is : ' .$result ."<br/>"; // string does not return
+
 
   return $result;
 }
@@ -66,12 +67,14 @@ $totalResult = 0 ;
 
 for ($i = 0 ; $i < 10 ; $i ++ ) {
     // echo sum ( $i , $i + 2);
+    $totalResult += sum ($i , $i+2);
+    // $totalResult = $totalResult + sum( $i , $i + 2);
 }
 // for ($i = 0 : $i < 10 ; $i++ ){
 //     $totalResult += sum ($i , $i+2);
 // }   
  
-$totalResult = $totalResult + sum( $i , $i + 2);
+//  var_dump ($totalResult);
 echo  " Total Result  :  " .$totalResult ;
 
 ?>   
