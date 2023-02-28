@@ -49,7 +49,8 @@ echo "<br/>";
 // echo sum (55 , 'a');
 
 
-function  sum (int $a, int $b) : int
+function  sum (int $a, int $b) : float // all intger number add folat but when declear int we can not declear float
+
 {
 // function  sum ( $a,  $b){ // reliable 
 
