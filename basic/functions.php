@@ -46,4 +46,8 @@ echo "<pre>";
 print_r($multiples);
 echo "</pre>"; // call back function
 
+$t = " name ";
+$tr = " kabir";
+ $t.= $tr;
 
+ echo $t;  //String Operators
